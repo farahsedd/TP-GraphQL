@@ -95,6 +95,29 @@ users[0].cvs.push(cvs[0].id);
 users[1].cvs.push(cvs[1].id);
 users[2].cvs.push(cvs[2].id);
 
+cv_skill: [
+    {
+        id: 1,
+        idCv: 1,
+        idSkill: 1,
+    },
+    {
+        id: 2,
+        idCv: 2,
+        idSkill: 2
+    },
+    {
+        id: 3,
+        idCv: 3,
+        idSkill: 3
+    },
+    {
+        id: 4,
+        idCv: 1,
+        idSkill: 4
+    },
+  
+]
 export const db = {
     skills,
     users,

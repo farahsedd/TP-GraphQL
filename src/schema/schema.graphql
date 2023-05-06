@@ -37,3 +37,7 @@ type Query{
     getCvById(id: Int!):Cv
     getInfoByCv:Info
 }
+type Subscription {
+  CVUpdates: CV!
+
+}
