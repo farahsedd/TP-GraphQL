@@ -1,6 +1,5 @@
-import { sign } from "crypto";
 
-interface Cv {
+export interface Cv {
     id: number,
     name: string;
     age: string;
@@ -9,7 +8,7 @@ interface Cv {
     user: number;
 }
 
-interface Skill {
+export interface Skill {
     id: number,
     designation: string;
     cvs: number[];
@@ -26,6 +25,12 @@ interface User {
 enum Role {
     ADMIN = "ADMIN",
     USER = "USER",
+}
+
+interface cv_skill{
+    id : number,
+    idCv: number,
+    idSkill:number
 }
 
 
@@ -95,7 +100,7 @@ users[0].cvs.push(cvs[0].id);
 users[1].cvs.push(cvs[1].id);
 users[2].cvs.push(cvs[2].id);
 
-cv_skill: [
+const cv_skill:cv_skill[]= [
     {
         id: 1,
         idCv: 1,
@@ -122,4 +127,5 @@ export const db = {
     skills,
     users,
     cvs,
+    cv_skill,
 };

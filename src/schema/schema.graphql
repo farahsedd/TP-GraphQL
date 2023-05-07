@@ -26,6 +26,12 @@ enum Role {
   ADMIN
 }
 
+type cv_skill{
+  id: ID!
+  idCv: ID!
+  idSkill: ID!
+}
+
 type Info{
   user:User,
   skills:[Skill!]!
@@ -38,6 +44,6 @@ type Query{
     getInfoByCv:Info
 }
 type Subscription {
-  CVUpdates: CV!
+  CVUpdates: Cv!
 
 }

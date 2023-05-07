@@ -12,10 +12,13 @@ export const Query = {
     },
     getCvById: (parent: any, args:any , { db }: typeof context, info: any) => {
         const {id } = args;
-        return db.cvs.find((cv) => cv.id === id)
+        const cv= db.cvs.find((cv) => cv.id === id)
+        if (!cv) throw new GraphQLError("CV not found");
+        return cv;
+
+
     },
     getInfoByCv: (parent:any, args: any, { db }: typeof context, info: any) => {
-        const {id } = args;
         const user = db.users.find((user) => user.id === parent.user);
         if (!user) {
             throw new Error(`User with ID ${parent.userId} not found`);
